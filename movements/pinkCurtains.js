@@ -15,7 +15,6 @@ function draw() {
   // Get a gaussian random number w/ mean of 0 and standard deviation of 1.0
   
   let xloc = randomGaussian(0);
-  let yloc = randomGaussian(0);
 
   let sd = 120;                // Define a standard deviation
   let mean = width/2;         // Define a mean value (middle of the screen along the x-axis)
@@ -27,7 +26,7 @@ function draw() {
   fill(col.r, col.g, col.b, 120);
 
   noStroke();
-  ellipse(xloc, height/2, yloc, width/2);   // Draw an ellipse at our "normal" random position
+  ellipse(xloc, height/2, 30, 30);   // Draw an ellipse at our "normal" random position
 }
 
 // TODO:
