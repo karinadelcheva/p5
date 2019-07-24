@@ -1,0 +1,12 @@
+
+html,
+/* add */
+body {
+    background-color: black
+}
+p {
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    position: center;
+
+}

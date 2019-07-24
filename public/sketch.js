@@ -1,17 +1,22 @@
 let ds;
+let canvas;
+let font = 'Playfair Display';
+let fontsize = 20;
+
 
 function setup() {
-  createCanvas(1900, 950);
+  canvas = createCanvas(window.innerWidth, window.innerHeight);
   ds = new PenroseLSystem();
   //please, play around with the following line
   ds.simulate(5);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
 }
 
 function draw() {
   background(0);
-  ds.render();
+  ds.render(); 
 }
-
 function PenroseLSystem() {
   this.steps = 0;
 
