@@ -30,3 +30,6 @@ function draw() {
   ellipse(xloc, height/2, yloc, width/2);   // Draw an ellipse at our "normal" random position
 }
 
+// TODO:
+// - the headline creates a black line through which the algorithm doesn't pass;
+
