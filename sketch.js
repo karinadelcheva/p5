@@ -1,34 +1,22 @@
-var w;
-
-class Walker {
-  constructor(height, width) {
-    this.x = width / 2;
-    this.y = height / 2;
-  }
-  display() {
-    stroke(0);
-    point(this.x, this.y);
-  }
-  step() {
-    let choice = int(random(4));
-    if (choice == 0) {
-      this.x++;
-    } else if (choice == 1) {
-      this.x--;
-    } else if (choice == 2) {
-      this.y++;
-    } else {
-      this.y--;
-    }
-  }
-}
 function setup() {
-  createCanvas(640, 360);
-  // Create a walker object
-  w = new Walker(640, 360);
-  background(255);
+  createCanvas(1280, 680);
+  stroke(255);
+  noFill();
 }
+
 function draw() {
-  w.step();
-  w.display();
+  background(0);
+  for (let i = 0; i < 200; i += 20) {
+    bezier(
+      mouseX - i / 2.0,
+      40 + i,
+      410,
+      20,
+      440,
+      300,
+      240 - i / 16.0,
+      300 + i / 8.0
+    );
+  }
 }
+
