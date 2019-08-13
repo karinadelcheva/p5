@@ -10,14 +10,14 @@ let movers = [];
 let liquid;
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  createCanvas(window.innerWidth , window.innerHeight - 70);
   reset();
   // Create liquid object
   liquid = new Liquid(0, height / 2, width, height / 2, 0.1);
 }
 
 function draw() {
-  background(127);
+  background(255);
 
   // Draw water
   liquid.display();
@@ -69,7 +69,7 @@ let Liquid = function(x, y, w, h, c) {
 Liquid.prototype.contains = function(m) {
   let l = m.position;
   return l.x > this.x && l.x < this.x + this.w &&
-         l.y > this.y && l.y < this.y + this.h;
+        l.y > this.y && l.y < this.y + this.h;
 };
 
 // Calculate drag force
@@ -121,7 +121,7 @@ Mover.prototype.update = function() {
 Mover.prototype.display = function() {
   stroke(0);
   strokeWeight(2);
-  fill(255,127);
+  fill(455, 156);
   ellipse(this.position.x, this.position.y, this.mass * 16, this.mass * 16);
 };
 
